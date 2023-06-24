@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aqua191V+</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@700&family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<!--background (Some pattern or color-->
+	<div class="maininfo">
+		
+		<!--Div, main. This will be a big black rectangle that allows for the sides to be visible.-->
+		<div class="header">
+			
+			<!--Header and links (Not sure what links yet?)-->
+			<!--Links: Twitter, Twitch, Discord, Aqua Store-->
+			<!--Introduction--><!--Picture-->
+
+			<!--Footer-->
+			<a href="index.html"><img src="assets/aqualogo.png" alt="Aqua191V+" width="20%"></a>
+			<!--Add in a light mode button at the right side of the screen-->
+			<!-- <button>Light Mode</button> -->
+
+			<button class="headerbutton" onclick="javascript:toggleLightmode();"><img src="assets/lightbulb.svg"></button>
+		</div>
+
+		<div class="anidelay">
+			<!--Code from https://codepen.io/aldrie/pen/PojGYLo-->
+			<div class="stack" style="--stacks: 3;">
+	   			<span style="--index: 0;">AQUA191V+</span>
+	    		<span style="--index: 1;">AQUA191V+</span>
+	    		<span style="--index: 2;">AQUA191V+</span>
+	  		</div>			
+
+		</div>
+
+
+		<div class="links">
+			<a href="https://www.twitch.tv/aqua191v" target="_blank">Twitch</a>
+			<a href="https://www.youtube.com/@AQUA191V" target="_blank">Youtube</a>
+			<a href="https://twitter.com/aqua191V/" target="_blank">Twitter</a>
+			<a href="https://discord.gg/arASfNH" target="_blank">Discord</a>
+			<a href="https://uwumarket.us/collections/aqua" target="_blank">Merch</a>
+		</div>
+		
+		<hr class="anidelay">
+
+		<div class="infocontainer">
+			<div class="info infosubitem">
+				<h2>Welcome to the HAGURUM8 Laboratory.</h2>
+				<p>I am Android No.191, but you can call me AQUA+. I come from the future, of a cyberpunk alternate dimension. I am a time traveler, working under a mad scientist, and I was doing routine checkups of the time machine prototype until a major anomaly suddenly appeared and sucked me into the machine, kicking me into this timeline with a busted time machine!</p>
+				<p>This Pog Pogroid exists in da lab with da labm8s, the cool crew of scientists (?) who love to POG at pogqua.</p>
+			</div>
+
+			<div class="photo infosubitem">
+<!-- 				<div class="frame"></div> -->
+				<img src="https://pbs.twimg.com/media/Fyhq6pbWAAAW8qK?format=jpg&name=4096x4096" alt="pogqua191v+" width="70%">
+			</div>
+
+
+		</div>
+
+		<div class="tags">
+			<p><a href="https://twitter.com/search?q=%23AQUAVTArt&src=hashtag_click" target="_blank">#AQUAVTArt</a></p>
+			<p><a href="https://twitter.com/search?q=%23AQUA_LiVE&src=hashtag_click" target="_blank">#AQUA_LiVE</a></p>
+			<p><a href="https://twitter.com/hashtag/AQUA%E6%AD%8C?src=hashtag_click" target="_blank">#AQUA歌</a></p>
+		</div>
+
+
+
+		<footer>
+			<p>Aqua191v+ 2023</p>
+		</footer>
+
+
+		<div class="splash">
+			<img class="logo"src="assets/aqualogolrg.png">
+		</div>
+	</div>
+
+
+	<script>
+		
+		function toggleLightmode(){
+			console.log("clicked");
+			document.querySelector(".maininfo").classList.toggle("lightmode");
+
+		}
+
+	</script>
+
+</body>
+</html>

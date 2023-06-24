@@ -1,0 +1,278 @@
+:root{
+	--PogquaRed: #b90d38;
+	--PogquaTeal: #01c7b9;
+	--PogquaGrey: #2a3137;
+	--PogquaWhite: #ffffff;
+	--PogquaBlack: black;
+
+	--splash-screen-duration: 2s;
+}
+
+body{
+	font-family: 'Bebas Neue', sans-serif;
+	background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/4881401e-4cc8-44ee-9747-562a3880eb5a-profile_banner-480.png");
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+
+	text-align: center;
+
+}
+
+
+
+.links{
+	font-size: 1.5rem;
+	padding: 20px;
+}
+.links > a {
+	padding: 0px 5px;
+}
+
+.maininfo{
+	width: 75%;
+	background-color: var(--PogquaGrey);
+	color: var(--PogquaWhite);
+	/*//Used to center the div (very helpful)*/
+	margin: 0px auto;
+	/*Box Shadow*/
+  box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
+
+
+}
+
+.header{
+	background-color: var(--PogquaTeal);
+	text-align: left;
+	padding: 10px;
+
+	/*We live in a society where people create pog solutions like using flexbox with space between on stack overflow. 
+	This works in this case because there is only two elements
+	https://stackoverflow.com/questions/29578633/how-do-i-place-a-button-next-to-a-heading
+	*/
+	display: flex;	
+	justify-content: space-between;
+}
+
+.headerbutton{
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+
+.headerbutton > img{
+	width: 50%;
+}
+
+
+
+.infocontainer{
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+}
+
+.infosubitem{
+	width: 400px;
+}
+
+.infosubitem > p {
+	font-family: 'Oswald';
+}
+
+.infosubitem > img{
+  box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
+
+}
+
+/*.infosubitem > .frame{
+	border: 2px solid	var(--PogquaTeal);
+  margin: auto;
+  width: auto;
+  height: auto;
+  position: absolute;
+  padding: 15px 10px;
+}*/
+
+/*Tags Section*/
+.tags{
+	padding: 10px;
+}
+
+.tags>p{
+	margin: 0px;
+}
+
+
+/*Footer Section*/
+
+footer{
+	border-top: solid 3px var(--PogquaTeal);
+	background-color: var(--PogquaBlack);
+	color:  var(--PogquaWhite);
+	padding: 10px;
+}
+h1{
+
+	font-family: 'Rajdhani', sans-serif;
+}
+
+a{
+	color: var(--PogquaRed);
+}
+a:hover{
+	color: var(--PogquaTeal);
+	animation: glitch 1s ease infinite 1s alternate-reverse;
+}
+
+.anidelay{
+	animation-delay: var(--splash-screen-duration);
+
+	/*Courtesy of Zenon: https://codepen.io/zenonx/pen/eYQzdWy*/
+}
+
+/*Animated HR*/
+/*https://codepen.io/Grienauer/pen/PdPPKZ*/
+
+hr{
+	width: 0;
+  animation: separator-width 1s ease-out forwards;
+}
+
+
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 99.5%;
+  }
+}
+
+/*Glitch effect*/
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 4rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation:
+    stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms + var(--splash-screen-duration)),
+    glitch 2s ease infinite calc(2s + var(--splash-screen-duration)) alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 var(--PogquaRed), 2px -3px 0 var(--PogquaTeal);
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 var(--PogquaRed), -2px 3px 0 var(--PogquaTeal);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 var(--PogquaRed), 2px -3px 0 var(--PogquaTeal);
+    transform: translate(var(--glitch-translate));
+  }
+  5% {
+    text-shadow: 2px -3px 0 var(--PogquaRed), -2px 3px 0 var(--PogquaTeal);
+  }
+  15%, 100% {  text-shadow: none; transform: none; }
+}
+
+.splash{
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: var(--PogquaTeal);
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	animation: 1s fadeout 1s ease-in-out forwards;
+}
+
+.logo{
+	width: 50%;
+	animation: logospin 1s ease-in-out forwards; ;
+}
+
+
+@keyframes logospin{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(359deg);
+		display: none;
+
+	}
+}
+
+@keyframes fadeout{
+	0%{
+		opacity: 1;
+
+	}
+
+	99%{
+		opacity: 0;
+		height: 100%;
+		width: 100%;
+
+	
+/*To have the links be usable, reduce the size of the div https://stackoverflow.com/questions/42278600/how-to-use-displaynone-on-the-end-of-a-css-animation*/
+	}
+	100%{
+		height: 0;
+		width: 0;
+	}
+}
+
+/*Light Mode*/
+
+.lightmode{
+	background-color: var(--PogquaWhite);
+	color: var(--PogquaGrey);
+}
+
+@media(max-width: 600px){
+	.infocontainer{
+		width: 90%;
+	}
+	.photo.infosubitem{
+		display: none;
+	}
+
+}
