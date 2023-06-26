@@ -22,7 +22,7 @@ body{
 
 
 .links{
-	font-size: 1.5rem;
+	font-size: 2rem;
 	padding: 20px;
 }
 .links > a {
@@ -57,10 +57,12 @@ body{
 .headerbutton{
 	background-color: rgba(0,0,0,0);
 	border: none;
+
 }
 
 .headerbutton > img{
 	width: 50%;
+	padding-right: 10px;
 }
 
 
@@ -80,6 +82,7 @@ body{
 
 .infosubitem > p {
 	font-family: 'Oswald';
+	font-size: 1.25rem;
 }
 
 .infosubitem > img{
@@ -103,6 +106,7 @@ body{
 
 .tags>p{
 	margin: 0px;
+	font-size: 1.5rem;
 }
 
 
@@ -163,7 +167,7 @@ hr{
   font-weight: bold;
   grid-row-start: 1;
   grid-column-start: 1;
-  font-size: 4rem;
+  font-size: 5.5rem;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
   --clip-top: calc(var(--stack-height) * var(--index));
