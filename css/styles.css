@@ -281,4 +281,8 @@ hr{
 		display: none;
 	}
 
+	.stack span{
+		font-size:4rem;
+	}
+
 }
